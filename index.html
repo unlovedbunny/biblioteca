@@ -5,12 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biblioteca</title>
   <link rel="stylesheet" href="./lorota.css">
+  <link rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer" /> 
 </head>
 <body>
-  <header></header>
+  <section 
+  id="favoritos" 
+  class="fixed top-0 right-[0px] bg-yellow-800 h-screen w-[360px] text-slate-200">
+  <div id="cabeçalho favoritos" class="flex justify-between m-3">
+    <p>Meus Favoritos</p>
+    <button id="fechar-favoritos">
+      <i class="fa-solid fa-x"></i>
+    </button>
+  </div>
+  <section id="livros-favoritos">
+    <p>livro 1</p>
+    <p>livro 2</p>
+    <p>livro 3</p>
+  </section>
+    <p>quantidade</p>
+  </section>
+  <header class="flex bg-yellow-800 justify-between">
+    <img 
+    class="h-28 mt-2 mb-2" 
+    src="./imgs/logoBiblioteca.png"
+    alt="imagem de gatinho como a logo da minha Biblioteca pessoal."/>
+    <div class="text-red-50 flex gap-3 items-end mx-3">
+    <button id="abrir-favoritos"><i class="fa-regular fa-heart"></i></button>
+    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    <button><i class="fa-regular fa-user"></i></button>
+    </div>
+  </header>
   <main>
-    <section id="container-livros"></section>
+    <section id="container-livros" class="flex flex-wrap"></section>
   </main>
-  <script src="./main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>

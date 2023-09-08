@@ -1,7 +1,4 @@
-//const nomeLivro = "Cinder";
-//const genero = "fantasia";
-//const idade = "+14";
-//const nomeArqImg = "cinder.jpeg";
+import { inicializarFavoritos } from "./scr/menuFavoritos";
 
 const lista = [ 
     {
@@ -40,7 +37,7 @@ const lista = [
         id: 5,
         nome: "Winter",
         genero: "Fantasia, SCI-FI.",
-        idade: "+12",
+        idade: "+14",
         nomeArqImg: "winter.jpeg",
         autor: "Merissa Meyer",
     },
@@ -72,11 +69,11 @@ const lista = [
 
     for(const produtolista of lista){
 
-        const livro = `<div id="livro1">
+        const livro = `<div class="border-solid border-2 border-indigo-600 w-48 m-2" id="livro${produtolista.id}">
         <img src="./imgs/${produtolista.nomeArqImg}" 
         alt="Imagem do livro ${produtolista.nome}, ${produtolista.autor}."
         style="height: 285px;"/>
-        <p>${produtolista.nome}</p>
+        <p class="nome-livro">${produtolista.nome}</p>
         <p>${produtolista.autor}</p>
         <p>${produtolista.genero}</p>
         <p>${produtolista.idade}</p>
@@ -86,5 +83,6 @@ const lista = [
         document.getElementById("container-livros").innerHTML += livro;
     }
         
+    inicializarFavoritos();
 
     
